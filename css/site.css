@@ -10,28 +10,3 @@
 body {
     font-family: Urbanist, sans-serif;
 }
-
-menu {
-    padding: 0;
-    margin: auto;
-}
-
-menu li {
-    list-style-type: none;
-    display: inline;
-    padding: 14px 16px;
-    text-align: center;
-}
-
-.menu-header {
-    height;
-}
-
-nav {
-    display: flex;
-    alignment: center;
-}
-
-.dropdown, .menu-header, h1 {
-    display: none;
-}
