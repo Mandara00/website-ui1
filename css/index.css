@@ -1,0 +1,54 @@
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero .hero-title{
+    position: absolute;
+    bottom: 80px;
+    left: 40px;
+    color: #ffffff;
+    font-size: 4rem;
+    text-align: left;
+}
+
+.hero .hero-button {
+    position: absolute;
+    bottom: 40px;
+    left: 42px;
+
+    text-transform: uppercase;
+    color: white;
+    background: none;
+    font-size: 24px;
+}
+
+.hero .hero-button:hover {
+    font-size: 28px;
+    transition: 300ms all ease;
+}
+
+@media(max-width: 1280px) {
+    .hero .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero .hero-button {
+
+    }
+}
+
+@media(max-width: 1024px) {
+    .hero .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero .hero-button {
+
+    }
+}

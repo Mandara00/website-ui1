@@ -2,6 +2,8 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>Antwerp Vintage Watches</title>
 </head>
 <body>
@@ -9,35 +11,34 @@
 <header>
     <nav>
         <h2>Menu</h2>
-        <ul>
-            <li><a href="./index.html">HOME</a></li>
-            <li><a href="html/producten.html">PRODUCTEN</a>
-                <ul class="dropdown">
+        <ul class="navbar-left">
+            <li class="navbar-item nav-left-item current-page"><a href="./index.html">home</a></li>
+            <li class="navbar-item dropdown"><a href="html/producten.html">producten</a>
+                <ul class="dropdown-content">
                     <li><a href="#">Rolex</a></li>
                     <li><a href="#">Audemars Piguet</a></li>
                     <li><a href="#">Patek Philippe</a></li>
                 </ul>
             </li>
-            <li>PERSONALISERING</li>
+            <li class="navbar-item"><a href="#">personalisering</a></li>
         </ul>
-        <a href="./index.html"><img src="media/AVW_Logo_256px.png" alt="AVW Logo"></a>
-        <ul>
-            <li><a href="html/faq.html">FAQ</a></li>
-            <li><a href="html/contact.html">CONTACT</a></li>
-            <li>SEARCH</li>
-            <li>CART</li>
+        <a href="./index.html" class="navbar-logo"><img src="media/AVW_Logo_256px.png" alt="AVW Logo"></a>
+        <ul class="navbar-right">
+            <li class="navbar-item"><a href="html/faq.html">faq</a></li>
+            <li class="navbar-item"><a href="html/contact.html">contact</a></li>
+            <li class="navbar-item"><a href="#">zoeken</a></li>
+            <li class="navbar-item nav-right-item"><a href="#">cart</a></li>
         </ul>
     </nav>
 </header>
 <main>
-    <section>
+    <section class="hero">
         <h2>Main foto</h2>
-        <img src="media/home/Home_Main_Banner.jpg" alt="Home Main Banner">
+        <a href="html/producten.html"><img src="media/home/Home_Main_Banner.jpg" alt="Home Main Banner"></a>
+        <a href="html/producten.html" class="hero-title"><span>Bekijk ons assortiment </span><span>van luxe horloges</span></a>
+        <a href="html/producten.html" class="hero-button">shop</a>
     </section>
-    <section>
-        <h2>Bekijk ons assortiment van luxe horloges</h2>
-        <button onclick="location.href='html/producten.html'">SHOP ></button>
-    </section>
+
     <aside>
         <h2>2 Sfeer foto's</h2>
         <img src="media/home/Home_Patek.jpg" alt="Sfeer foto Patek Philippe">
@@ -82,7 +83,7 @@
         <h2>Testimonials</h2>
         <section>
             <blockquote>
-                <h3>Koning Filip</h3>
+                <h3 class="show">Koning Filip</h3>
                 <p>
                     "Voor de meest verfijnde ervaring wat betreft verkoopservice, kan ik altijd terecht bij
                     AVW. Door hun prachtige horloges in combinatie met de perfecte service hebben ze een
@@ -92,7 +93,7 @@
         </section>
         <section>
             <blockquote>
-                <h3>Elon Musk</h3>
+                <h3 class="show">Elon Musk</h3>
                 <p>
                     "Antwerp Vintage Watches are a special kind of crazy for selling these watches at such a low
                     price. One day I was drunk and accidentally bought all of their stock through their website.
@@ -103,7 +104,7 @@
         </section>
         <section>
             <blockquote>
-                <h3>Sofiane Boussaadia (ook bekend als BOEF)</h3>
+                <h3 class="show">Sofiane Boussaadia (ook bekend als BOEF)</h3>
                 <p>
                     "Ewa, mijn nieuwe album Luxeprobleem is nu uit op Spotify. Stream hem a neef. AVW heeft mij
                     de beste horloges op de markt verkocht voor mijn videoclips van mijn lijpe album
