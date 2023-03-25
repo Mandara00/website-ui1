@@ -1,0 +1,49 @@
+.banner img {
+    width: 100%;
+}
+
+.sort-size {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.sort-size h3 {
+    margin-right: 10px;
+}
+
+.sort-size-option {
+    margin-left: 10px;
+}
+
+.rolex, .audemars-piguet, .patek-philippe {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 20px;
+}
+
+.rolex img, .audemars-piguet img, .patek-philippe img {
+    min-width: 0;
+    width: 100%;
+}
+
+.rolex section p:last-child, .audemars-piguet section p:last-child, .patek-philippe section p:last-child {
+    color: rgba(0, 0, 0, 0.50);
+}
+
+.images {
+    position: relative;
+}
+
+.images .front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: opacity 100ms ease-in-out;
+}
+
+.images .front:hover {
+    opacity: 0;
+}

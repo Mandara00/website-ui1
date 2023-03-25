@@ -2,6 +2,8 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/site.css">
+    <link rel="stylesheet" href="../../css/productendetail.css">
     <title>Rolex Daytona 16520</title>
 </head>
 <body>
@@ -9,28 +11,28 @@
 <header>
     <nav>
         <h2>Menu</h2>
-        <ul>
-            <li><a href="../../index.html">HOME</a></li>
-            <li><a href="../producten.html">PRODUCTEN</a>
-                <ul class="dropdown">
+        <ul class="navbar-left">
+            <li class="navbar-item nav-left-item"><a href="../../index.html">home</a></li>
+            <li class="navbar-item dropdown"><a href="../producten.html">producten</a>
+                <ul class="dropdown-content">
                     <li><a href="#">Rolex</a></li>
                     <li><a href="#">Audemars Piguet</a></li>
                     <li><a href="#">Patek Philippe</a></li>
                 </ul>
             </li>
-            <li>PERSONALISERING</li>
+            <li class="navbar-item"><a href="#">personalisering</a></li>
         </ul>
-        <a href="../../index.html"><img src="../../media/AVW_Logo_256px.png" alt="AVW Logo"></a>
-        <ul>
-            <li><a href="../faq.html">FAQ</a></li>
-            <li><a href="../contact.html">CONTACT</a></li>
-            <li>SEARCH</li>
-            <li>CART</li>
+        <a href="../../index.html" class="navbar-logo"><img src="../../media/AVW_Logo_256px.png" alt="AVW Logo"></a>
+        <ul class="navbar-right">
+            <li class="navbar-item"><a href="../faq.html">faq</a></li>
+            <li class="navbar-item"><a href="../contact.html">contact</a></li>
+            <li class="navbar-item"><a href="#">zoeken</a></li>
+            <li class="navbar-item nav-right-item"><a href="#">cart</a></li>
         </ul>
     </nav>
 </header>
 <main>
-    <section>
+    <section class="breadcrumb">
         <h2>Breadcrumb</h2>
         <ol>
             <li><a href="../../index.html">Home</a></li>
@@ -38,69 +40,63 @@
             <li>Rolex Daytona 16520</li>
         </ol>
     </section>
-    <section>
+    <section class="main-area">
         <h2>Product foto en basis info</h2>
-        <img src="../../media/products/product_images/rolex_daytona_16520/RO_16520_FullView_Front_900px.jpg"
-             alt="Rolex Daytona 16520 FullView Front High Res">
-
-        <section>
-            <h3>Rolex Daytona 16520</h3>
-            <p>€ 73.500</p>
-            <p>
+        <div class="product-image">
+            <img src="../../media/products/product_images/rolex_daytona_16520/RO_16520_FullView_Front_900px.jpg"
+                 alt="Rolex Daytona 16520 FullView Front High Res">
+        </div>
+        <section class="product-info">
+            <h3>Product info</h3>
+            <section class="product-info-main">
+                <h4 class="show">Rolex Daytona 16520</h4>
+                <p>
+                <span>
                 1988 was het jaar dat Rolex voor opschudding zorgde als het om de Daytona-lijn ging. De introductie van
                 de Daytona van de tweede generatie, met een automatisch Zenith-uurwerk, luidde een nieuw tijdperk in
                 voor dit model.
-            </p>
-            <p>
+                </span><span>
                 Het begon allemaal met referenties 16520 (roestvrij staal), 16523 (roestvrij staal en 18k geelgoud) en
                 16528 (18k geelgoud). De 165XX had een op Zenith gebaseerd automatisch uurwerk in plaats van een
                 handmatig opwindbaar uurwerk, een saffierglas in plaats van een plexiglas en een kast van 40 mm met
                 kroonbeschermers in plaats van een kast van 37 mm.
-            </p>
-            <p>
+                </span><span>
                 Graag presenteren wij u een zeer vroege en bijzondere 16520. De vroegste 16520's heten 'Floaters'.
                 Kenmerkend voor deze zeer verzamelbare vroege vijfcijferige Daytona's is de zwevende 'Cosmograph'-tekst,
                 die los van de voorgaande vier regels tekst op de wijzerplaat lijkt te zijn gedrukt. Dit bijzondere
                 detail komt alleen voor op Daytona's met R-serienummer of L-serienummers, die alleen van 1988 tot begin
                 1990 werden geproduceerd. Verder heeft het horloge een R-serienummer, wat de allereerste serie van de
                 Zenith Daytona is en zeer zeldzaam omdat het alleen werd geproduceerd van 1988 tot begin 1989.
-            </p>
-            <p>
-                Eindelijk heeft dit exemplaar de juiste MK I bezel. Dit is de eerste uitvoering die is gegradueerd van
-                50 naar 200 en de tekst 'Eenheden per uur' op de drie-uurspositie heeft. Het komt ook op de juiste 78360
-                Oyster-armband, die de geborstelde afwerking en 503 eindschakels heeft.
-            </p>
-            <p>
+                </span><span>
                 Het horloge wordt geleverd als een zeer volledige set, inclusief de binnen- en buitendoos, papieren,
                 boekjes, Rolex-servicepapieren en serielabel. Bovendien heeft het een veilingherkomst, maar het
                 belangrijkste is dat het in onberispelijke staat is bewaard met de groene casebook-sticker nog aanwezig.
                 Verzamelaars opgelet.
-            </p>
-            <p>
+                </span><span>
                 Het horloge verkeert in goede staat, zeker gezien de leeftijd en zeldzaamheid. De
                 roestvrijstalen kast heeft dikke bandaanzetten en wordt geleverd met een gevouwen Jubilee-band.
-            </p>
-            <button>IN WINKELWAGEN</button>
-            <p>op voorraad ✓</p>
-            <p>voor 23:59 besteld, morgen in huis.</p>
-            <a href="#specificaties">Specificaties & Eigenschappen ⇓</a>
+                </span>
+                </p>
+                <p>€ 73.500</p>
+                <button onclick="location.href='#';">IN WINKELWAGEN</button>
+                <p><a href="#specificaties">Specificaties & Eigenschappen ⇓</a></p>
+            </section>
+            <section class="extra-photos">
+                <h4>Extra foto's</h4>
+                <img src="../../media/products/product_images/rolex_daytona_16520/RO_16520_CloseUp_Bezel.jpg"
+                     alt="Rolex Daytona 16520 CloseUp Bezel">
+                <img src="../../media/products/product_images/rolex_daytona_16520/RO_16520_CloseUp_Daytona.jpg"
+                     alt="Rolex Daytona 16520 CloseUp Daytona">
+                <img src="../../media/products/product_images/rolex_daytona_16520/RO_16520_CloseUp_Lugs.jpg"
+                     alt="Rolex Daytona 16520 CloseUp Lugs">
+                <img src="../../media/products/product_images/rolex_daytona_16520/RO_16520_FullView_Back.jpg"
+                     alt="Rolex Daytona 16520 FullView Back">
+            </section>
         </section>
     </section>
 
-    <section>
-        <h2>Extra foto's</h2>
-        <img src="../../media/products/product_images/rolex_daytona_16520/RO_16520_CloseUp_Bezel.jpg"
-             alt="Rolex Daytona 16520 CloseUp Bezel">
-        <img src="../../media/products/product_images/rolex_daytona_16520/RO_16520_CloseUp_Daytona.jpg"
-             alt="Rolex Daytona 16520 CloseUp Daytona">
-        <img src="../../media/products/product_images/rolex_daytona_16520/RO_16520_CloseUp_Lugs.jpg"
-             alt="Rolex Daytona 16520 CloseUp Lugs">
-        <img src="../../media/products/product_images/rolex_daytona_16520/RO_16520_FullView_Back.jpg"
-             alt="Rolex Daytona 16520 FullView Back">
-    </section>
-
     <section id="specificaties">
-        <h2>Specificaties & eigenschappen</h2>
+        <h2 class="show">Specificaties & eigenschappen</h2>
 
         <dl>
             <dt>Afmetingen Horlogekast</dt>

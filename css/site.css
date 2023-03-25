@@ -70,26 +70,40 @@ header nav {
     display: block;
 }
 
-a {
-    text-decoration: none;
-    color: black;
-}
-
 .current-page {
     text-decoration: underline;
 }
 
-a:hover, .current-page:hover {
-    color: #a68f6e;
+a {
+    text-decoration: none;
+    color: black;
+    transition: 100ms all ease;
 }
 
-h1, h2, h3 {
+a:hover, .current-page:hover {
+    color: #a68f6e;
+    transition: 100ms all ease;
+}
+
+h1, h2, h3, h4, h5 {
     display: none;
 }
 
 .show {
     display: revert;
 }
+
+footer p {
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 50px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    border-top: solid 1px rgba(0, 0, 0, 0.75);
+}
+
 
 @media(max-width: 1024px) {
     .navbar-item {
