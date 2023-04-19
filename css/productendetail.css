@@ -3,6 +3,7 @@
 }
 
 .breadcrumb ol {
+    /*Flexbox om breadcrumb horizontaal uit te lijnen.*/
     display: flex;
 }
 
@@ -24,6 +25,7 @@
 }
 
 .main-area {
+    /*Flexbox om de grote foto en info naast elkaar te zetten.*/
     display: flex;
     width: 100%;
     align-content: space-evenly;
@@ -40,6 +42,7 @@
 }
 
 .product-info {
+    /*Flexbox om de main info en de extra foto's juist uit te lijnen.*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -56,6 +59,7 @@
 }
 
 .product-info p:first-of-type span {
+    /*Gap tussen 2 paragrafen*/
     display: block;
     margin-bottom: 10px;
 }
@@ -88,6 +92,7 @@
 }
 
 .extra-photos {
+    /*Horizontale uitlijning van de extra foto's*/
     display: flex;
     gap: 10px;
 }

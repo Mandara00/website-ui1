@@ -8,26 +8,26 @@ body {
 }
 
 header nav {
+    /*De navbar bestaat uit 3 elementen: navbar link, het logo en navbar rechts.
+    Deze worden op de juiste manier uitgelijnd d.m.v. een flexbox.*/
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 .navbar-left, .navbar-right {
+    /*Flexbox om de linkse en rechtse navbar*/
     display: flex;
     padding: 0;
 }
 
 .navbar-logo {
-    display: flex;
     height: 100px;
-    width: auto;
-    opacity: 70%;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+    text-align: center;
+}
+
+.navbar-logo img {
+    height: 100%;
 }
 
 .navbar-item {
@@ -46,18 +46,16 @@ header nav {
     margin-right: 0;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
 .dropdown-content {
+    /*dropdown staat standaard uit, pas bij hover komt die tevoorschijn.*/
     display: none;
     list-style-type: none;
+    /*Wanneer een relative positionering wordt gebruik, zal het dropdown menu alles eronder naar benden
+    duwen wanneer deze zichtbaar wordt*/
     position: absolute;
     background-color: #f9f9f9;
     min-width: 150px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     padding: 20px 20px;
     z-index: 1;
 }
@@ -67,6 +65,8 @@ header nav {
 }
 
 .dropdown:hover .dropdown-content {
+    /*wanneer er over de link gehoverd wordt, wordt het submenu zichtbaar gemaakt
+    en onder elkaar gezet d.m.v. display: block*/
     display: block;
 }
 
@@ -86,26 +86,49 @@ a:hover, .current-page:hover {
 }
 
 h1, h2, h3, h4, h5 {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    left: -10000px;
 }
 
 .show {
-    display: revert;
+    /*een class 'show' om bij bepaalde titels toe te voegen die wel zichtbaar moeten zijn.*/
+    position: revert;
+    width: revert;
+    height: revert;
+    overflow: revert;
+    left: revert;
 }
 
 footer p {
-    width: fit-content;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    margin-top: 50px;
+    text-align: center;
+    width: 150px;
+    margin: 50px auto 0 auto;
+
     padding-top: 10px;
     padding-bottom: 30px;
     border-top: solid 1px rgba(0, 0, 0, 0.75);
 }
 
+.zoom-effect {
+    /*Ik heb hier en op meerdere plaatsen op mijn site een zoom effect gecreëerd d.m.v overflow:hidden te gebruiken.
+    Ik weet dat het eigenlijk niet mag, maar er is geen andere manier om dit effect te bekomen zonder overflow te gebruiken.*/
+    overflow: hidden;
+}
 
-@media(max-width: 1024px) {
+.zoom-effect img {
+    transition: transform 500ms;
+}
+
+.zoom-effect img:hover {
+    transform: scale(1.025);
+    transition: transform 500ms;
+}
+
+
+@media (max-width: 1024px) {
     .navbar-item {
         margin-left: 10px;
         margin-right: 10px;

@@ -1,26 +1,18 @@
 .hero {
+    /*relatieve positionering om de tekst juist te zetten*/
     position: relative;
     text-align: center;
     margin-bottom: 50px;
 }
 
-.hero-image img {
+.hero img {
     vertical-align: bottom;
     width: 100%;
     z-index: 1;
-    transition: transform 500ms;
 }
 
-.hero-image img:hover {
-    transform: scale(1.025);
-    transition: transform 500ms;
-}
-
-.hero-image {
-    overflow: hidden;
-}
-
-.hero .hero-title{
+.hero-title {
+    /*absolute positionering t.o.v. de section .hero om de tekst op de foto te plaatsen*/
     position: absolute;
     bottom: 80px;
     left: 40px;
@@ -30,7 +22,12 @@
     z-index: 2;
 }
 
-.hero .hero-button {
+.hero-title:hover {
+    color: white;
+}
+
+.hero-button {
+    /*absolute positionering t.o.v. de section .hero om de tekst op de foto te plaatsen*/
     position: absolute;
     bottom: 40px;
     left: 42px;
@@ -43,12 +40,14 @@
     transition: 300ms all ease;
 }
 
-.hero .hero-button:hover {
+.hero-button:hover {
     letter-spacing: 3px;
     transition: 300ms all ease;
+    color: white;
 }
 
 .avw-description {
+    /*flexbox voor de 2 foto's en tekst*/
     display: flex;
     align-content: space-between;
     margin-top: 60px;
@@ -57,22 +56,12 @@
 
 .avw-description aside {
     margin-right: 20px;
-}
-
-.avw-description-img {
-    overflow: hidden;
     width: 100%;
     height: auto;
 }
 
-.avw-description aside img {
+.avw-description img {
     vertical-align: bottom;
-    transition: transform 500ms;
-}
-
-.avw-description aside img:hover {
-    transform: scale(1.025);
-    transition: transform 500ms;
 }
 
 .avw-description article {
@@ -83,6 +72,7 @@
     background-color: #4a5662;
     padding: 50px;
     margin: 0;
+    /*flexbox om de tekst en button onder elkaar te zetten*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -112,12 +102,14 @@
 }
 
 .extra-info {
+    /*flexbox om de tekst en foto naast elkaar te zetten*/
     display: flex;
     margin: 60px 0 0 0;
     gap: 20px;
 }
 
-.extra-info section {
+.extra-info > section {
+    /*flexbox om de 2 articles onder elkaar te zetten.*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -152,6 +144,7 @@
 }
 
 .testimonials {
+    /*flexbox om de 3 testimonials naast elkaar te zetten*/
     display: flex;
     justify-content: space-between;
     margin: 60px 0 0 0;

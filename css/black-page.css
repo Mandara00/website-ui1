@@ -1,0 +1,18 @@
+/*Stylesheet voor pagina's die een zwart thema hebben: FAQ en Contact*/
+
+body {
+    background: black;
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+a:hover, .current-page:hover {
+    color: #6f7ecb;
+}
+
+.dropdown-content{
+    background-color: #131313;
+}

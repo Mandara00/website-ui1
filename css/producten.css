@@ -3,6 +3,7 @@
 }
 
 .sort-size {
+    /*Flexbox om de sorteer opties naast elkaar te zetten.*/
     display: flex;
     justify-items: center;
     align-items: center;
@@ -17,6 +18,7 @@
 }
 
 .rolex, .audemars-piguet, .patek-philippe {
+    /*Grid om alle producten juist uit te lijnen.*/
     display: grid;
     grid-template-rows: repeat(auto-fit, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -37,6 +39,7 @@
 }
 
 .images .front {
+    /*Absolute positionering om de voorste foto exact op de achterste te zetten.*/
     position: absolute;
     top: 0;
     left: 0;
@@ -45,5 +48,10 @@
 }
 
 .images .front:hover {
+    /*Bij een hover op de bovenste foto wordt de opacity op 0 gezet, waardoor de achterste foto zichtbaar wordt.*/
     opacity: 0;
+}
+
+.rolex section, .audemars-piguet section, .patek-philippe section {
+
 }

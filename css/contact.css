@@ -1,3 +1,154 @@
 .contact-form {
+    background: rgb(19,35,60);
+    background: radial-gradient(circle, rgba(19,35,60,1) 0%, rgba(0,0,0,1) 45%);
+
+    width: 100%;
+    padding: 75px 0 100px 0;
+    margin: 0;
+}
+
+.contact-form h2 {
+    text-align: center;
+    font-size: 3rem;
+
+    /*Relatieve positionering met negatieve waarde om de titel hoger te zetten.
+    Als de hele section omhoog gezet wordt zal de gradient rand zichtbaar zijn, wat er niet helemaal netjes uitziet.*/
+    position: relative;
+    top: -60px;
+}
+
+.contact-form form{
+    margin: 0 auto;
+
+    /*Flexbox om alles in het formulier verticaal uit te lijnen.*/
+    display: flex;
+    flex-direction: column;
+
+    width: 25%;
+    /*Zelfde uitleg als in .contact-form h2*/
+    position: relative;
+    top: -50px;
+}
+
+.contact-form label {
+    margin: 10px 0 5px 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.contact-form input, .contact-form textarea {
+    font-family: Urbanist, sans-serif;
+    border: none;
+    padding-left: 10px;
+
+    font-size: 1rem
+}
+
+.text-field {
+    border-radius: 500px;
+    height: 25px;
+}
+
+.contact-form textarea {
+    border-radius: 15px;
+    padding-top: 10px;
+}
+
+.submit {
+    width: 200px;
+    height: 40px;
+    margin: 20px auto 0 auto;
+    border-radius: 500px;
+
+    background-color: #162744;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: letter-spacing 200ms ease;
+}
+
+.submit:hover {
+    letter-spacing: 1px;
+    transition: letter-spacing 200ms ease;
+}
+
+.contact-info {
+    margin-top: 50px;
+    width: 100%;
+
+    /*Alle elementen onder het formulier zijn gepositioneerd a.d.h.v. een grid*/
     display: grid;
+    grid-template: repeat(16, 85px) / repeat(20, 85px);
+}
+
+.map {
+    grid-area: 1 / 2 / 7 / 10;
+}
+
+.map iframe {
+    vertical-align: bottom;
+    width: 100%;
+    height: 100%;
+}
+
+.address {
+    grid-area: 2 / 11 / 5 / 18;
+}
+
+.address address {
+    /*Flexbox voor verticale uitlijning van het adres*/
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.address p {
+    margin: 0;
+}
+
+.uren {
+    grid-area: 8 / 4 / 13 / 9;
+}
+
+.uren h2 {
+    margin-top: 0;
+}
+
+dl {
+    margin-left: 20px;
+    /*Grid om dt en dd naast elkaar te zetten.*/
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-column-gap: 30px;
+}
+
+dt {
+    grid-column-start: 1;
+}
+
+dd {
+    grid-column-start: 2;
+    font-style: italic;
+    margin-left: 0.5em;
+    padding-bottom: 1em;
+}
+
+
+aside:first-of-type {
+    grid-area: 13 / 3 / 17 / 11;
+}
+
+aside:last-of-type {
+    grid-area: 6 / 12 / 16 / 20;
+}
+
+aside img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+footer p {
+    border-color: white;
 }

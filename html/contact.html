@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/site.css">
+    <link rel="stylesheet" href="../css/black-page.css">
     <link rel="stylesheet" href="../css/contact.css">
     <title>Contact</title>
 </head>
@@ -15,14 +16,14 @@
             <li class="navbar-item nav-left-item"><a href="../index.html">home</a></li>
             <li class="navbar-item dropdown"><a href="./producten.html">producten</a>
                 <ul class="dropdown-content">
-                    <li><a href="#">Rolex</a></li>
-                    <li><a href="#">Audemars Piguet</a></li>
-                    <li><a href="#">Patek Philippe</a></li>
+                    <li><a href="./producten.html">Rolex</a></li>
+                    <li><a href="./producten.html">Audemars Piguet</a></li>
+                    <li><a href="./producten.html">Patek Philippe</a></li>
                 </ul>
             </li>
             <li class="navbar-item"><a href="#">personalisering</a></li>
         </ul>
-        <a href="../index.html" class="navbar-logo"><img src="../media/AVW_Logo_256px.png" alt="AVW Logo"></a>
+        <a href="../index.html" class="navbar-logo"><img src="../media/AVW_Logo_256px_white.png" alt="AVW Logo"></a>
         <ul class="navbar-right">
             <li class="navbar-item"><a href="./faq.html">faq</a></li>
             <li class="navbar-item  current-page"><a href="./contact.html">contact</a></li>
@@ -36,78 +37,81 @@
         <h2 class="show">Contacteer ons</h2>
         <form>
             <label for="f-name">Voornaam</label>
-            <input type="text" id="f-name" name="f-name">
+            <input type="text" id="f-name" name="f-name" class="text-field">
 
             <label for="l-name">Achternaam</label>
-            <input type="text" id="l-name" name="f-name">
+            <input type="text" id="l-name" name="f-name" class="text-field">
 
             <label for="email">Mailadres</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" pattern="^*@\.[a-z]$" class="text-field">
 
             <label for="nummer">Telefoonnummer</label>
-            <input type="tel" id="nummer" name="nummer" pattern="^0?[1-9][0-9]{7,8}$">
+            <input type="tel" id="nummer" name="nummer" pattern="^0?[1-9][0-9]{7,8}$" class="text-field">
 
             <label for="message">Bericht</label>
             <textarea id="message" name="message" rows="10" cols="30"></textarea>
 
-            <input type="submit" value="Verzenden">
+            <input type="submit" value="Verzenden" class="submit">
         </form>
     </section>
 
-    <section>
-        <h2>Map</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2499.0464983228476!2d4.398606415969979!3d51.21821907958857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f6f6d8b6d7e3%3A0xa5d48056daaf69cc!2sNationalestraat%205%2C%202000%20Antwerpen!5e0!3m2!1snl!2sbe!4v1678352183957!5m2!1snl!2sbe"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <section class="contact-info">
+        <h2>contact-info</h2>
+        <section class="map">
+            <h3>Map</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2499.0464983228476!2d4.398606415969979!3d51.21821907958857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f6f6d8b6d7e3%3A0xa5d48056daaf69cc!2sNationalestraat%205%2C%202000%20Antwerpen!5e0!3m2!1snl!2sbe!4v1678352183957!5m2!1snl!2sbe"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <section class="address">
+            <h3 class="show">Contactinfo & Adres</h3>
+            <address>
+                <p>Antwerp Vintage Watches</p>
+                <p>Nationalestraat 5</p>
+                <p>Antwerpen 2000 - BE</p>
+
+                <a href="mailto:info@antwerpvintagewatches.com">info@antwerpvintagewatches.com</a>
+                <a href="tel:+31(0)206380296">+31 (0)20 6380 296</a>
+            </address>
+        </section>
+
+        <section class="uren">
+            <h3 class="show">Openingsuren</h3>
+            <dl>
+                <dt>Maandag</dt>
+                <dd>Gesloten</dd>
+
+                <dt>Dinsdag</dt>
+                <dd>10:00 - 17:00</dd>
+
+                <dt>Woensdag</dt>
+                <dd>10:00 - 17:00</dd>
+
+                <dt>Donderdag</dt>
+                <dd>10:00 - 17:00</dd>
+
+                <dt>Vrijdag</dt>
+                <dd>10:00 - 17:00</dd>
+
+                <dt>Zaterdag</dt>
+                <dd>10:00 - 17:00</dd>
+
+                <dt>Zondag</dt>
+                <dd>Gesloten</dd>
+            </dl>
+        </section>
+
+        <aside class="zoom-effect">
+            <h3>Sfeer foto Shop Main</h3>
+                <img src="../media/contact/contact_shop_main.jpg" alt="Sfeer Foto Shop Shelf">
+        </aside>
+
+        <aside class="zoom-effect">
+            <h3>Sfeer foto Shop Shelf</h3>
+                <img src="../media/contact/contact_shop_shelf.jpg" alt="Sfeer Foto Shop Shelf">
+        </aside>
     </section>
-
-    <section>
-        <h2>Contactinfo & Adres</h2>
-        <address>
-            <p>Antwerp Vintage Watches</p>
-            <p>Nationalestraat 5</p>
-            <p>Antwerpen 2000 - BE</p>
-
-            <a href="mailto:info@antwerpvintagewatches.com">info@antwerpvintagewatches.com</a>
-            <a href="tel:+31(0)206380296">+31 (0)20 6380 296</a>
-        </address>
-    </section>
-
-    <section>
-        <h2>Openingsuren</h2>
-        <dl>
-            <dt>Maandag</dt>
-            <dd>Gesloten</dd>
-
-            <dt>Dinsdag</dt>
-            <dd>10:00 - 17:00</dd>
-
-            <dt>Woensdag</dt>
-            <dd>10:00 - 17:00</dd>
-
-            <dt>Donderdag</dt>
-            <dd>10:00 - 17:00</dd>
-
-            <dt>Vrijdag</dt>
-            <dd>10:00 - 17:00</dd>
-
-            <dt>Zaterdag</dt>
-            <dd>10:00 - 17:00</dd>
-
-            <dt>Zondag</dt>
-            <dd>Gesloten</dd>
-        </dl>
-    </section>
-
-    <aside>
-        <h2>Sfeer foto Shop Main</h2>
-        <img src="../media/contact/contact_shop_main.jpg" alt="Sfeer Foto Shop Shelf">
-    </aside>
-
-    <aside>
-        <h2>Sfeer foto Shop Shelf</h2>
-        <img src="../media/contact/contact_shop_shelf.jpg" alt="Sfeer Foto Shop Shelf">
-    </aside>
 </main>
 <footer>
     <p><small>Mandara Perera - 2023</small></p>
