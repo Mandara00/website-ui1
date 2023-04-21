@@ -80,10 +80,27 @@
     /*Alle elementen onder het formulier zijn gepositioneerd a.d.h.v. een grid*/
     display: grid;
     grid-template: repeat(16, 85px) / repeat(20, 85px);
+    grid-template-areas:
+        ".  m  m  m  m  m  m  m  m  .  .  .  .  .  .  .  .  .  .  ."
+        ".  m  m  m  m  m  m  m  m  .  a  a  a  a  a  a  a  a  .  ."
+        ".  m  m  m  m  m  m  m  m  .  a  a  a  a  a  a  a  a  .  ."
+        ".  m  m  m  m  m  m  m  m  .  a  a  a  a  a  a  a  a  .  ."
+        ".  m  m  m  m  m  m  m  m  .  a  a  a  a  a  a  a  a  .  ."
+        ".  m  m  m  m  m  m  m  m  .  . f2 f2 f2 f2 f2 f2 f2 f2  ."
+        ".  .  .  .  .  .  .  .  .  .  . f2 f2 f2 f2 f2 f2 f2 f2  ."
+        ".  .  .  u  u  u  u  u  u  .  . f2 f2 f2 f2 f2 f2 f2 f2  ."
+        ".  .  .  u  u  u  u  u  u  .  . f2 f2 f2 f2 f2 f2 f2 f2  ."
+        ".  .  .  u  u  u  u  u  u  .  . f2 f2 f2 f2 f2 f2 f2 f2  ."
+        ".  .  .  u  u  u  u  u  u  .  . f2 f2 f2 f2 f2 f2 f2 f2  ."
+        ".  .  .  u  u  u  u  u  u  .  . f2 f2 f2 f2 f2 f2 f2 f2  ."
+        ".  . f1 f1 f1 f1 f1 f1 f1 f1  . f2 f2 f2 f2 f2 f2 f2 f2  ."
+        ".  . f1 f1 f1 f1 f1 f1 f1 f1  . f2 f2 f2 f2 f2 f2 f2 f2  ."
+        ".  . f1 f1 f1 f1 f1 f1 f1 f1  . f2 f2 f2 f2 f2 f2 f2 f2  ."
+        ".  . f1 f1 f1 f1 f1 f1 f1 f1  .  .  .  .  .  .  .  .  .  .";
 }
 
 .map {
-    grid-area: 1 / 2 / 7 / 10;
+    grid-area: m;
 }
 
 .map iframe {
@@ -93,7 +110,7 @@
 }
 
 .address {
-    grid-area: 2 / 11 / 5 / 18;
+    grid-area: a;
 }
 
 .address address {
@@ -108,7 +125,7 @@
 }
 
 .uren {
-    grid-area: 8 / 4 / 13 / 9;
+    grid-area: u;
 }
 
 .uren h2 {
@@ -136,11 +153,11 @@ dd {
 
 
 aside:first-of-type {
-    grid-area: 13 / 3 / 17 / 11;
+    grid-area: f1;
 }
 
 aside:last-of-type {
-    grid-area: 6 / 12 / 16 / 20;
+    grid-area: f2;
 }
 
 aside img {

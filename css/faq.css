@@ -10,20 +10,53 @@ main h2 {
     /*Grid om de foto's op de juiste plaats te zetten.
     Ik moest 2 grids gebruiken, omdat de foto's en vragen op een ander niveau staan.*/
     display: grid;
-    grid-template: repeat(30, 85px) / repeat(20, 85px);
+    grid-template: repeat(20, 85px) / repeat(30, 85px);
+    grid-template-areas:
+        "f1 f1 f1 f1 f1 f1 f1  .  .  .  .  .  .  .  .  .  .  .  .  ."
+        "f1 f1 f1 f1 f1 f1 f1  .  .  .  .  .  .  .  .  .  .  .  .  ."
+        "f1 f1 f1 f1 f1 f1 f1  .  .  .  .  .  .  .  .  .  .  .  .  ."
+        "f1 f1 f1 f1 f1 f1 f1  .  .  .  .  .  .  .  .  .  .  .  .  ."
+        "f1 f1 f1 f1 f1 f1 f1  .  .  .  .  .  .  .  .  .  .  .  .  ."
+        "f1 f1 f1 f1 f1 f1 f1  .  .  .  .  .  .  .  .  .  .  .  .  ."
+        "f1 f1 f1 f1 f1 f1 f1  .  .  .  .  .  .  .  .  .  .  .  .  ."
+        "f1 f1 f1 f1 f1 f1 f1  .  .  .  .  .  .  .  .  .  .  .  .  ."
+        " .  .  .  .  .  .  .  .  .  . f2 f2 f2 f2 f2 f2 f2 f2 f2 f2"
+        " .  .  .  .  .  .  .  .  .  . f2 f2 f2 f2 f2 f2 f2 f2 f2 f2"
+        " .  .  .  .  .  .  .  .  .  . f2 f2 f2 f2 f2 f2 f2 f2 f2 f2"
+        " .  .  .  .  .  .  .  .  .  . f2 f2 f2 f2 f2 f2 f2 f2 f2 f2"
+        " .  .  .  .  .  .  .  .  .  . f2 f2 f2 f2 f2 f2 f2 f2 f2 f2"
+        " .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ."
+        " .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ."
+        " .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ."
+        " .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ."
+        " . f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3  .  .  .  .  .  ."
+        " . f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3  .  .  .  .  .  ."
+        " . f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3  .  .  .  .  .  ."
+        " . f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3  .  .  .  .  .  ."
+        " . f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3  .  .  .  .  .  ."
+        " . f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3  .  .  .  .  .  .";
+    height: 2550px;
 }
 
 .vragen > dl {
     /*De grid van de vragen wilde niet exact op de andere grid komen, geen idee waarom.
-    Als oplossing een absolute positionering gebruikt en het manueel naar boven gedaan met 16px.*/
+    als oplossing een absolute positionering gebruikt en het manueel naar boven gedaan met 16px.*/
     position: absolute;
     top: -16px;
     left: 0;
 
     /*Grid om de vragen op de juiste plaats te zetten.*/
     display: grid;
-    grid-template: repeat(30, 85px) / repeat(20, 85px);
-
+    grid-template-areas:
+        " .  .  .  . v1 v1 v1 v1 v1 v1"
+        " .  .  .  . v2 v2 v2 v2 v2 v2"
+        "v3 v3 v3  .  .  .  .  .  .  ."
+        "v4 v4 v4 v4 v4 v4 v4 v4 v4 v4"
+        " .  .  .  .  .  .  .  .  . v5"
+        "v6 v6  . v7 v7  . v8 v8 v8 v8";
+    gap: 30px;
+    height: 2550px;
+    width: 100%;
     z-index: -1;
 }
 
@@ -44,48 +77,55 @@ dd {
 }
 
 dt:nth-of-type(1), dt:nth-of-type(1) + dd {
-    grid-area: 2 / 9 / 4 / 19;
+    grid-area: v1;
+    transform: translate(-200px, 80px);
 }
 
 dt:nth-of-type(2), dt:nth-of-type(2) + dd {
-    grid-area: 5 / 10 / 7 / 20;
+    grid-area: v2;
+    transform: translate(-120px);
 }
 
 dt:nth-of-type(3), dt:nth-of-type(3) + dd {
-    grid-area: 11 / 2 / 13 / 10;
+    grid-area: v3;
+    transform: translate(90px, 120px);
 }
 
 dt:nth-of-type(4), dt:nth-of-type(4) + dd {
     margin-top: 20px;
-    grid-area: 15 / 1 / 16 / 20;
+    grid-area: v4;
+    transform: translate(0, 70px);
 }
 
 dt:nth-of-type(5), dt:nth-of-type(5) + dd {
-    grid-area: 18 / 16 / 26 / 20;
+    grid-area: v5;
+    transform: translate(-30px, 0);
 }
 
 dt:nth-of-type(6), dt:nth-of-type(6) + dd {
-    grid-area: 26 / 1 / 31 / 6;
+    grid-area: v6;
 }
 
 dt:nth-of-type(7), dt:nth-of-type(7) + dd {
-    grid-area: 25 / 8 / 29 / 13;
+    grid-area: v7;
+    transform: translate(0, -100px);
 }
 
 dt:nth-of-type(8), dt:nth-of-type(8) + dd {
-    grid-area: 27 / 14 / 30 / 21;
+    grid-area: v8;
+    transform: translate(0, 50px);
 }
 
 aside:nth-of-type(1) {
-    grid-area: 1 / 1 / 9 / 8;
+    grid-area: f1;
 }
 
 aside:nth-of-type(2) {
-    grid-area: 9 / 11 / 14 / 21;
+    grid-area: f2;
 }
 
 aside:nth-of-type(3) {
-    grid-area: 18 / 2 / 24 / 15;
+    grid-area: f3;
 }
 
 aside img {
