@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Urbanist, sans-serif;
     max-width: 1700px;
@@ -19,11 +23,15 @@ header nav {
     /*Flexbox om de linkse en rechtse navbar*/
     display: flex;
     padding: 0;
+    width: 500px;
+}
+
+.navbar-right {
+    justify-content: right;
 }
 
 .navbar-logo {
     height: 100px;
-    text-align: center;
 }
 
 .navbar-logo img {
@@ -38,12 +46,12 @@ header nav {
     font-size: 1rem;
 }
 
-.nav-left-item {
-    margin-left: 0;
+.navbar-item a {
+    vertical-align: center;
 }
 
-.nav-right-item {
-    margin-right: 0;
+.nav-left-item {
+    margin-left: 0;
 }
 
 .dropdown-content {
@@ -56,7 +64,7 @@ header nav {
     background-color: #f9f9f9;
     min-width: 150px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    padding: 20px 20px;
+    padding: 20px;
     z-index: 1;
 }
 
@@ -68,6 +76,11 @@ header nav {
     /*wanneer er over de link gehoverd wordt, wordt het submenu zichtbaar gemaakt
     en onder elkaar gezet d.m.v. display: block*/
     display: block;
+}
+
+.cart svg {
+    height: 100%;
+    width: auto;
 }
 
 .current-page {
@@ -105,10 +118,9 @@ h1, h2, h3, h4, h5 {
 footer p {
     text-align: center;
     width: 150px;
-    margin: 50px auto 0 auto;
+    margin: 50px auto 30px auto;
 
     padding-top: 10px;
-    padding-bottom: 30px;
     border-top: solid 1px rgba(0, 0, 0, 0.75);
 }
 
@@ -119,6 +131,7 @@ footer p {
 }
 
 .zoom-effect img {
+    vertical-align: bottom;
     transition: transform 500ms;
 }
 

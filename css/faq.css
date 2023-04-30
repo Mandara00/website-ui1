@@ -1,63 +1,26 @@
+.vragen {
+    display: grid;
+    grid-template-areas:
+        "h2 h2 h2 h2 h2 h2 h2"
+        "f1 f1 f1 v1 v1 v1 v1"
+        "f1 f1 f1 v2 v2 v2 v2"
+        "v3 v3  . f2 f2 f2 f2"
+        "v4 v4 v4 v4 v4 v4 v4"
+        "f3 f3 f3 f3 f3  . v5"
+        "v6  . v7 v7  . v8 v8";
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
 main h2 {
+    grid-area: h2;
     text-align: center;
     margin: 75px 0 75px 0;
     font-size: 3rem;
 }
 
-.vragen {
-    position: relative;
-
-    /*Grid om de foto's op de juiste plaats te zetten.
-    Ik moest 2 grids gebruiken, omdat de foto's en vragen op een ander niveau staan.*/
-    display: grid;
-    grid-template: repeat(20, 85px) / repeat(30, 85px);
-    grid-template-areas:
-        "f1 f1 f1 f1 f1 f1 f1  .  .  .  .  .  .  .  .  .  .  .  .  ."
-        "f1 f1 f1 f1 f1 f1 f1  .  .  .  .  .  .  .  .  .  .  .  .  ."
-        "f1 f1 f1 f1 f1 f1 f1  .  .  .  .  .  .  .  .  .  .  .  .  ."
-        "f1 f1 f1 f1 f1 f1 f1  .  .  .  .  .  .  .  .  .  .  .  .  ."
-        "f1 f1 f1 f1 f1 f1 f1  .  .  .  .  .  .  .  .  .  .  .  .  ."
-        "f1 f1 f1 f1 f1 f1 f1  .  .  .  .  .  .  .  .  .  .  .  .  ."
-        "f1 f1 f1 f1 f1 f1 f1  .  .  .  .  .  .  .  .  .  .  .  .  ."
-        "f1 f1 f1 f1 f1 f1 f1  .  .  .  .  .  .  .  .  .  .  .  .  ."
-        " .  .  .  .  .  .  .  .  .  . f2 f2 f2 f2 f2 f2 f2 f2 f2 f2"
-        " .  .  .  .  .  .  .  .  .  . f2 f2 f2 f2 f2 f2 f2 f2 f2 f2"
-        " .  .  .  .  .  .  .  .  .  . f2 f2 f2 f2 f2 f2 f2 f2 f2 f2"
-        " .  .  .  .  .  .  .  .  .  . f2 f2 f2 f2 f2 f2 f2 f2 f2 f2"
-        " .  .  .  .  .  .  .  .  .  . f2 f2 f2 f2 f2 f2 f2 f2 f2 f2"
-        " .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ."
-        " .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ."
-        " .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ."
-        " .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ."
-        " . f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3  .  .  .  .  .  ."
-        " . f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3  .  .  .  .  .  ."
-        " . f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3  .  .  .  .  .  ."
-        " . f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3  .  .  .  .  .  ."
-        " . f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3  .  .  .  .  .  ."
-        " . f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3  .  .  .  .  .  .";
-    height: 2550px;
-}
-
-.vragen > dl {
-    /*De grid van de vragen wilde niet exact op de andere grid komen, geen idee waarom.
-    als oplossing een absolute positionering gebruikt en het manueel naar boven gedaan met 16px.*/
-    position: absolute;
-    top: -16px;
-    left: 0;
-
-    /*Grid om de vragen op de juiste plaats te zetten.*/
-    display: grid;
-    grid-template-areas:
-        " .  .  .  . v1 v1 v1 v1 v1 v1"
-        " .  .  .  . v2 v2 v2 v2 v2 v2"
-        "v3 v3 v3  .  .  .  .  .  .  ."
-        "v4 v4 v4 v4 v4 v4 v4 v4 v4 v4"
-        " .  .  .  .  .  .  .  .  . v5"
-        "v6 v6  . v7 v7  . v8 v8 v8 v8";
-    gap: 30px;
-    height: 2550px;
-    width: 100%;
-    z-index: -1;
+dl {
+    display: contents;
 }
 
 dt {
@@ -66,9 +29,9 @@ dt {
 }
 
 dd {
-    /*Relatieve positionering om elke dd 50px onder de bijbehorende dt te zetten*/
+    /*Relatieve positionering om elke dd 20px onder de bijbehorende dt te zetten*/
     position: relative;
-    top: 50px;
+    top: 20px;
 
     font-size: 1.3rem;
     margin-left: 0;
@@ -76,62 +39,63 @@ dd {
     text-align: justify;
 }
 
-dt:nth-of-type(1), dt:nth-of-type(1) + dd {
+.v1 {
     grid-area: v1;
-    transform: translate(-200px, 80px);
+    transform: translate(-100px, 50px);
 }
 
-dt:nth-of-type(2), dt:nth-of-type(2) + dd {
+.v2 {
     grid-area: v2;
-    transform: translate(-120px);
+    transform: translate(-50px, -50px);
 }
 
-dt:nth-of-type(3), dt:nth-of-type(3) + dd {
+.v3 {
     grid-area: v3;
-    transform: translate(90px, 120px);
+    width: 140%;
+    transform: translate(100px, 50px);
 }
 
-dt:nth-of-type(4), dt:nth-of-type(4) + dd {
-    margin-top: 20px;
+.v4 {
     grid-area: v4;
-    transform: translate(0, 70px);
+    margin-bottom: 50px;
 }
 
-dt:nth-of-type(5), dt:nth-of-type(5) + dd {
+.v5 {
     grid-area: v5;
-    transform: translate(-30px, 0);
 }
 
-dt:nth-of-type(6), dt:nth-of-type(6) + dd {
+.v6 {
     grid-area: v6;
+    transform: translateY(30px);
 }
 
-dt:nth-of-type(7), dt:nth-of-type(7) + dd {
+.v7 {
     grid-area: v7;
-    transform: translate(0, -100px);
 }
 
-dt:nth-of-type(8), dt:nth-of-type(8) + dd {
+.v8 {
     grid-area: v8;
-    transform: translate(0, 50px);
+    transform: translateY(20px);
 }
 
-aside:nth-of-type(1) {
+.f1 {
     grid-area: f1;
+    width: 80%;
 }
 
-aside:nth-of-type(2) {
+.f2 {
     grid-area: f2;
 }
 
-aside:nth-of-type(3) {
+.f3 {
     grid-area: f3;
+    width: 90%;
+    transform: translateX(100px);
 }
 
 aside img {
     width: 100%;
     height: auto;
-    vertical-align: bottom;
 }
 
 footer p {
