@@ -65,16 +65,8 @@ function validatieEmail() {
     voornaam = voornaam.replace(/\s/g, '');
     achternaam = achternaam.replace(/\s/g, '');
 
-    console.log(email);
-    console.log(voornaam);
-    console.log(achternaam);
-    console.log(errormsg);
-
     let emailOption1 = voornaam + "." + achternaam + "@student.kdg.be";
     let emailOption2 = voornaam + "." + achternaam + "@kdg.be";
-
-    console.log(emailOption1);
-    console.log(emailOption2);
 
     if ((email === emailOption1) || (email === emailOption2)) {
         document.querySelector("#email").classList.add('validinput');
