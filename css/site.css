@@ -9,6 +9,12 @@ body {
     max-width: 1700px;
     margin: 0 auto;
     padding: 0 30px;
+
+    /* volgende 3 lijnen code is om de footer altijd onderaan de pagina te zetten,
+    ook wanneer de body niet het volledige scherm opneemt. */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header nav {
@@ -113,6 +119,10 @@ h1, h2, h3, h4, h5 {
     height: revert;
     overflow: revert;
     left: revert;
+}
+
+footer {
+    margin-top: auto;
 }
 
 footer p {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/site.css">
     <link rel="stylesheet" href="../css/personalisering.css">
+    <script src="../js/form_validation.js" defer></script>
     <title>Personalisering</title>
 </head>
 <body>
@@ -38,7 +39,125 @@
     </nav>
 </header>
 <main>
+    <form action="./bevestiging.html" method="get">
+        <section class="personalisering">
+            <h2 class="show">Personalisering</h2>
+            <fieldset>
+                <div class="product-amount">
+                    <div class="product">
+                        <label for="product" class="label-styling">Product<span class="required">*</span></label>
+                        <select id="product" name="product" class="input-styling" required>
+                            <option value="">Selecteer</option>
+                            <option value="Rolex Explorer 6610">Rolex Explorer 6610</option>
+                            <option value="Rolex Daytona 16520">Rolex Daytona 16520</option>
+                            <option value="Rolex Yacht-Master 16628">Rolex Yacht-Master 16628</option>
+                        </select>
+                    </div>
+                    <div class="amount">
+                        <label for="amount" class="label-styling">Hoeveelheid<span class="required">*</span></label>
+                        <input type="number" id="amount" name="amount" class="input-styling" value="1" min="1" max="10"
+                               required>
+                    </div>
+                </div>
 
+                <section class="materiaal-horlogeband">
+                    <h3 class="show label-styling">Materiaal Horlogeband<span class="required">*</span></h3>
+                    <label for=staal>
+                        <input name="materiaal-horlogeband" type="radio" id="staal" value="Staal" required>
+                        <span>Staal</span>
+                    </label>
+                    <label for="band-goud">
+                        <input name="materiaal-horlogeband" type="radio" id="band-goud" value="Goud">
+                        <span>Goud</span>
+                    </label>
+                    <label for="rose-goud">
+                        <input name="materiaal-horlogeband" type="radio" id="rose-goud" value="Rosé Goud">
+                        <span>Rosé Goud</span>
+                    </label>
+                    <label for="leer">
+                        <input name="materiaal-horlogeband" type="radio" id="leer" value="Leer">
+                        <span>Leer</span>
+                    </label>
+                </section>
+
+                <section class="kleur-wijzerplaat">
+                    <h3 class="show label-styling">Kleur Wijzerplaat<span class="required">*</span></h3>
+                    <label for=zwart>
+                        <input name="kleur-wijzerplaat" type="radio" id="zwart" value="Zwart" required>
+                        <span>Zwart</span>
+                    </label>
+                    <label for="wit">
+                        <input name="kleur-wijzerplaat" type="radio" id="wit" value="Wit">
+                        <span>Wit</span>
+                    </label>
+                    <label for="wijzerplaat-goud">
+                        <input name="kleur-wijzerplaat" type="radio" id="wijzerplaat-goud" value="Goud">
+                        <span>Goud</span>
+                    </label>
+                    <label for="blauw">
+                        <input name="kleur-wijzerplaat" type="radio" id="blauw" value="Blauw">
+                        <span>Blauw</span>
+                    </label>
+                    <label for="custom">
+                        <input name="kleur-wijzerplaat" type="radio" id="custom" value="Custom">
+                        <span>Custom</span>
+                    </label>
+                    <label for="custom-color">
+                        <input type="color" name="custom-color" id="custom-color" class="input-styling" value="#a68f6e">
+                    </label>
+                </section>
+
+                <label for="gravure" class="label-styling">Gravure achterkant horloge</label>
+                <input type="text" name="gravure" id="gravure" class="input-styling" maxlength="15">
+
+                <label for="message" class="label-styling">Eventuele opmerkingen voor bestelling</label>
+                <textarea id="message" name="message"></textarea>
+            </fieldset>
+        </section>
+        <section class="persoonlijke-info">
+            <h2 class="show">Persoonlijke Informatie</h2>
+            <fieldset>
+                <div class="first-last-name">
+                    <div class="first-name">
+                        <label for="f-name" class="label-styling" id="lbl-f-name">Voornaam
+                            <span class="required">*</span>
+                            <span id="error-f-name"></span>
+                        </label>
+                        <input type="text" id="f-name" name="f-name" class="input-styling" required>
+                    </div>
+                    <div class="last-name">
+                        <label for="l-name" class="label-styling" id="lbl-l-name">Achternaam
+                            <span class="required">*</span>
+                            <span id="error-l-name"></span>
+                        </label>
+                        <input type="text" id="l-name" name="l-name" class="input-styling" required>
+                    </div>
+                </div>
+
+                <label for="email" class="label-styling" id="lbl-email">Mailadres
+                    <span class="required">*</span>
+                    <span id="error-email"></span>
+                </label>
+                <input type="email" id="email" name="email" pattern="^*@\.[a-z]$" class="input-styling" required>
+
+                <label for="adres" class="label-styling">Adres<span class="required">*</span></label>
+                <input type="text" id="adres" name="adres" class="input-styling" required>
+
+                <div class="woonplaats-postcode">
+                    <div class="woonplaats">
+                        <label for="woonplaats" class="label-styling">Woonplaats<span class="required">*</span></label>
+                        <input type="text" id="woonplaats" name="woonplaats" class="input-styling" required>
+                    </div>
+                    <div class="postcode">
+                        <label for="postcode" class="label-styling">Postcode<span class="required">*</span></label>
+                        <input type="text" id="postcode" name="postcode" class="input-styling" required>
+                    </div>
+                </div>
+            </fieldset>
+            <span id="error"></span>
+            <input type="submit" id="submit" value="Bestelling plaatsen">
+        </section>
+    </form>
 </main>
 <footer>
     <p><small>Mandara Perera - 2023</small></p>

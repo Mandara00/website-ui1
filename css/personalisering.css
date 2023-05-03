@@ -1,0 +1,171 @@
+form {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.personalisering, .persoonlijke-info {
+    width: 30%;
+}
+
+.persoonlijke-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.first-last-name, .woonplaats-postcode, .product-amount {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-name, .last-name, .woonplaats, .postcode, .product, .amount {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h3 {
+    margin: 0;
+}
+
+.label-styling {
+    opacity: 75%;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: normal;
+    margin-bottom: 3px;
+}
+
+.input-styling {
+    box-sizing: border-box;
+
+    height: 25px;
+    font-family: Urbanist, sans-serif;
+
+    border-radius: 5px;
+    border: solid 1px rgba(134, 134, 134, 0.7);
+    background-color: #f5f5f4;
+}
+
+.required {
+    color: #a68f6e;
+}
+
+#message {
+    font-family: Urbanist, sans-serif;
+    border-radius: 5px;
+    border: solid 1px rgba(134, 134, 134, 0.7);
+    background-color: #f5f5f4;
+    min-width: 510px;
+    max-width: 510px;
+    min-height: 100px;
+    max-height: 400px;
+}
+
+select:focus, input:focus, #message:focus {
+    outline: none;
+    border: solid 1px rgb(94, 94, 94);
+    transition: all 200ms ease-in-out;
+}
+
+select:hover, input:hover, #message:hover {
+    background-color: rgba(192, 192, 192, 0.3);
+    transition: all 100ms ease-in-out;
+}
+
+label input[type="radio"] {
+    display: none;
+}
+
+label input[type="radio"] ~ span {
+    position: relative;
+    display: inline-block;
+    padding: 3px 0 3px 20px;
+    margin-right: 10px;
+    font-size: 0.95rem;
+}
+
+label input[type="radio"] ~ span:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: #f5f5f4;
+    margin-right: 5px;
+    border: solid 1px rgba(134, 134, 134, 0.3);
+    border-radius: 50%;
+    left: 0;
+    top: 4px;
+    box-sizing: border-box;
+    transition: all 100ms ease-in-out;
+}
+
+label input[type="radio"]:checked ~ span:before {
+    border: 4px solid #a68f6e;
+}
+
+label input[type="radio"]:hover ~ span:before {
+    background-color: #e7e5e4;
+}
+
+.product-amount, .materiaal-horlogeband, .kleur-wijzerplaat, #gravure, .first-last-name, #email, #adres {
+    margin-bottom: 20px;
+}
+
+#submit {
+    align-self: center;
+    width: 100%;
+    height: 50px;
+
+    font-family: Urbanist, sans-serif;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    background-color: #a68f6e;
+    color: white;
+    transition: 200ms all ease;
+}
+
+#submit:hover {
+    background-color: #c0a57f;
+    transition: 200ms all ease;
+    cursor: pointer;
+}
+
+#lbl-f-name, #lbl-l-name, #lbl-email {
+    display: flex;
+}
+
+#error-f-name, #error-l-name, #error-email {
+    margin-left: auto;
+    color: red;
+}
+
+#error {
+    text-align: center;
+    align-self: center;
+    margin: auto;
+    color: red;
+}
+
+.validinput {
+    background-color: #bbf7d0;
+}
+
+.validinput:hover {
+    background-color: #dcfce7;
+}
