@@ -11,7 +11,7 @@ function init() {
     achternaam.addEventListener("blur", validatieAchternaam)
 
     let email = document.querySelector("#email");
-    email.addEventListener("change", validatieEmail)
+    email.addEventListener("input", validatieEmail)
 }
 
 function formSubmit(event) {
@@ -32,6 +32,7 @@ function validatieVoornaam() {
 
     if (/^\s.*/.test(element.value) || /.*\s$/.test(element.value)) {
         errormsg.innerHTML = "let op spaties";
+        element.classList.remove('validinput');
         return false;
     } else {
         element.classList.add('validinput');
@@ -47,6 +48,7 @@ function validatieAchternaam() {
 
     if (/^\s.*/.test(element.value) || /.*\s$/.test(element.value)) {
         errormsg.innerHTML = "let op spaties";
+        element.classList.remove('validinput');
         return false;
     } else {
         element.classList.add('validinput');
@@ -73,6 +75,7 @@ function validatieEmail() {
         return true;
     } else {
         errormsg.innerHTML = "gebruik een kdg email met jouw naam";
+        document.querySelector("#email").classList.remove('validinput');
         return false;
     }
 }
