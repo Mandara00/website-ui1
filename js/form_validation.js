@@ -2,16 +2,16 @@ addEventListener("load", init);
 
 function init() {
     let formulier = document.querySelector("form");
-    formulier.addEventListener("submit", formSubmit);
+    formulier.addEventListener("submit", (event) => formSubmit());
 
     let voornaam = document.querySelector("#f-name");
-    voornaam.addEventListener("blur", validatieVoornaam)
+    voornaam.addEventListener("blur", (event) => validatieVoornaam());
 
     let achternaam = document.querySelector("#l-name");
-    achternaam.addEventListener("blur", validatieAchternaam)
+    achternaam.addEventListener("blur", (event) => validatieAchternaam());
 
     let email = document.querySelector("#email");
-    email.addEventListener("input", validatieEmail)
+    email.addEventListener("input", (event) => validatieEmail());
 }
 
 function formSubmit(event) {
@@ -32,10 +32,10 @@ function validatieVoornaam() {
 
     if (/^\s.*/.test(element.value) || /.*\s$/.test(element.value)) {
         errormsg.innerHTML = "let op spaties";
-        element.classList.remove('validinput');
+        element.classList.remove("validinput");
         return false;
     } else {
-        element.classList.add('validinput');
+        element.classList.add("validinput");
         return true;
     }
 }
@@ -48,10 +48,10 @@ function validatieAchternaam() {
 
     if (/^\s.*/.test(element.value) || /.*\s$/.test(element.value)) {
         errormsg.innerHTML = "let op spaties";
-        element.classList.remove('validinput');
+        element.classList.remove("validinput");
         return false;
     } else {
-        element.classList.add('validinput');
+        element.classList.add("validinput");
         return true;
     }
 }
@@ -64,18 +64,18 @@ function validatieEmail() {
     let voornaam = document.querySelector("#f-name").value.toLowerCase();
     let achternaam = document.querySelector("#l-name").value.toLowerCase();
 
-    voornaam = voornaam.replace(/\s/g, '');
-    achternaam = achternaam.replace(/\s/g, '');
+    voornaam = voornaam.replace(/\s/g, "");
+    achternaam = achternaam.replace(/\s/g, "");
 
     let emailOption1 = voornaam + "." + achternaam + "@student.kdg.be";
     let emailOption2 = voornaam + "." + achternaam + "@kdg.be";
 
     if ((email === emailOption1) || (email === emailOption2)) {
-        document.querySelector("#email").classList.add('validinput');
+        document.querySelector("#email").classList.add("validinput");
         return true;
     } else {
         errormsg.innerHTML = "gebruik een kdg email met jouw naam";
-        document.querySelector("#email").classList.remove('validinput');
+        document.querySelector("#email").classList.remove("validinput");
         return false;
     }
 }

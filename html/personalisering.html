@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/site.css">
     <link rel="stylesheet" href="../css/personalisering.css">
+    <script src="../js/dyn_data.js" defer></script>
+    <script src="../js/dyn_form.js" defer></script>
     <script src="../js/form_validation.js" defer></script>
     <title>Personalisering</title>
 </head>
@@ -48,9 +50,6 @@
                         <label for="product" class="label-styling">Product<span class="required">*</span></label>
                         <select id="product" name="product" class="input-styling" required>
                             <option value="">Selecteer</option>
-                            <option value="Rolex Explorer 6610">Rolex Explorer 6610</option>
-                            <option value="Rolex Daytona 16520">Rolex Daytona 16520</option>
-                            <option value="Rolex Yacht-Master 16628">Rolex Yacht-Master 16628</option>
                         </select>
                     </div>
                     <div class="amount">
@@ -150,12 +149,13 @@
                     </div>
                     <div class="postcode">
                         <label for="postcode" class="label-styling">Postcode<span class="required">*</span></label>
-                        <input type="text" id="postcode" name="postcode" class="input-styling" required>
+                        <input type="text" id="postcode" name="postcode" class="input-styling" pattern="[0-9]{4}"
+                               required>
                     </div>
                 </div>
             </fieldset>
             <span id="error"></span>
-            <input type="submit" id="submit" value="Bestelling plaatsen">
+            <button type="submit" id="submit">Bestelling plaatsen</button>
         </section>
     </form>
 </main>
