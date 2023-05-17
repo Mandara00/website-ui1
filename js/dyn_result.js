@@ -7,7 +7,7 @@ function init() {
 
     const img = "../media/products/product_images" + product.img;
     const name = product.name.replace(' - ', ' ');
-    const price = "€ " + product.price.toLocaleString('nl');
+    const price = "€ " + product.price.toLocaleString("nl");
     const description = product.description;
     const size = product.size + " mm";
     const reference = product.reference;
