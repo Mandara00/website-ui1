@@ -13,8 +13,8 @@ function init() {
     const reference = product.reference;
 
     let productLink;
-    if (product.index <= 3) {
-        productLink = "/mandara.kudaliyanagedonperera/html/producten/" + product.id.replace + ".html";
+    if (producten.indexOf(product) < 3) {
+        productLink = "./producten/" + product.id + ".html";
     } else {
         productLink = "#";
     }
